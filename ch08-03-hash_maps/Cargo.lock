@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "functions"
+name = "ch08-03-hash-maps"
 version = "0.1.0"

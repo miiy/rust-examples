@@ -1,5 +1,5 @@
 [package]
-name = "functions"
+name = "ch03-01-variables-and-mutability"
 version = "0.1.0"
 edition = "2021"
 

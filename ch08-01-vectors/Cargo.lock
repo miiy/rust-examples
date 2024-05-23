@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "branches"
+name = "ch08-01-vectors"
 version = "0.1.0"
