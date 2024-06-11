@@ -1,5 +1,5 @@
 [package]
-name = "aggregator"
+name = "ch13-01-closures-02"
 version = "0.1.0"
 edition = "2021"
 

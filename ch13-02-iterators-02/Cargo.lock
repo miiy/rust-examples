@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "aggregator"
+name = "ch13-02-iterators-02"
 version = "0.1.0"

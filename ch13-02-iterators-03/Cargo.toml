@@ -1,5 +1,5 @@
 [package]
-name = "aggregator"
+name = "ch13-02-iterators-03"
 version = "0.1.0"
 edition = "2021"
 
