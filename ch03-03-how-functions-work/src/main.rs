@@ -1,12 +1,12 @@
 fn main() {
     println!("Hello, world!");
-    
+
     another_function();
-    
+
     another_function_arg(5);
-    
+
     print_labeled_measurement(5, 'h');
-    
+
     expressions();
 
     let x = five();
@@ -49,7 +49,7 @@ fn plus_one(x: i32) -> i32 {
 // fn plus_one_error(x: i32) -> i32 {
 //     x + 1;
 // }
-// 
+//
 // build:
 // fn plus_one_error(x: i32) -> i32 {
 //     |    --------------            ^^^ expected `i32`, found `()`
