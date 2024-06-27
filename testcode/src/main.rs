@@ -1,5 +1,15 @@
+#[derive(Debug)]
+struct Retangle {
+    width: i32,
+    height:i32,
+}
+
 fn main() {
-    let mut a = String::from("hello");
-    a.push_str(" world");
-    println!("{a}")
+    let r = Retangle{
+        width: 100,
+        height: 100
+    };
+    println!("{r:?}");
+    dbg!(r);
+    // println!("{r:?}");
 }
