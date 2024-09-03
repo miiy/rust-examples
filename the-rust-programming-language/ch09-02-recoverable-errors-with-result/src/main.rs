@@ -1,23 +1,52 @@
+// 用 Result 处理可恢复的错误
+#![allow(unused_variables)]
+
 use std::fs::{self, File};
 use std::io::ErrorKind;
 use std::io::{self, Read};
 
-// // Result 枚举由两个成员 Ok 和 Err
-// enum Result<T, E> {
-//     Ok(T),
-//     Err(E),
-// }
 
 fn main() {
+    // Result 枚举有两个成员 Ok 和 Err
+    //
+    // enum Result<T, E> {
+    //     Ok(T),
+    //     Err(E),
+    // }
+
+    // 打开文件
+    open_file();
+
+    // 使用 match 表达式处理可能会返回的 Result 成员
     match_example();
+
+    // 使用不同的方式处理不同类型的错误
     match_example2();
+
     unwrap_or_else_example();
+
+    // 失败时 panic 的简写：unwrap 和 expect
+
     unwrap_example();
     except_example();
-    read_username_from_file();
-    read_username_from_file2();
-    read_username_from_file3();
-    read_username_from_file4();
+
+    // 传播错误
+    // 一个函数使用 match 将错误返回给代码调用者
+
+    let _ = read_username_from_file();
+
+    // 传播错误的简写 :? 运算符
+    // 一个使用 ? 运算符向调用者返回错误的函数
+    let _ = read_username_from_file2();
+    // ? 运算符之后的链式方法调用
+    let _ = read_username_from_file3();
+    // 使用 fs::read_to_string 而不是打开后读取文件
+    let _ = read_username_from_file4();
+}
+
+// 打开文件
+fn open_file() {
+    let greeting_file_result = File::open("hello.txt");
 }
 
 // 使用 match 表达式处理可能会返回的 Result 成员
@@ -60,6 +89,8 @@ fn unwrap_or_else_example() {
     });
 }
 
+// 失败时 panic 的简写：unwrap 和 expect
+
 // 如果 Result 值是成员 Ok 返回 Ok 中的值
 // 如果 Result 值是成员 Err, unwrap 会调用 panic!
 fn unwrap_example() {
@@ -73,6 +104,7 @@ fn except_example() {
 }
 
 // 传播错误
+
 // 一个函数使用 match 将错误返回给代码调用者
 fn read_username_from_file() -> Result<String, io::Error> {
     let username_file_result = File::open("hello.txt");
@@ -91,6 +123,7 @@ fn read_username_from_file() -> Result<String, io::Error> {
 }
 
 // 传播错误的简写 :? 运算符
+
 // 一个使用 ? 运算符向调用者返回错误的函数
 fn read_username_from_file2() -> Result<String, io::Error> {
     let mut username_file = File::open("hello.txt")?;

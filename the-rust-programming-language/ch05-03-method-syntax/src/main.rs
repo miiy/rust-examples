@@ -1,3 +1,27 @@
+// 方法语法
+
+fn main() {
+    // 在 Rectangle 结构体上定义 area 方法
+    area_method();
+
+    // 带有更多参数的方法
+    can_hold();
+
+    // 关联函数
+    let sq = Rectangle::square(3);
+    println!("{}", sq.width);
+
+    // 多个 impl 块
+    let rect1 = Rectangle{
+        width: 40,
+        height: 50,
+    };
+    let area2 = rect1.area2();
+    println!("{}", area2);
+
+}
+
+// 定义方法
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -23,14 +47,8 @@ impl Rectangle {
     }
 }
 
-// 多个 impl 块
-impl Rectangle {
-    fn can_hold2(&self, other: &Rectangle) -> bool {
-        self.width > other.width && self.height > other.height
-    }
-}
-
-fn main() {
+// 在 Rectangle 结构体上定义 area 方法
+fn area_method() {
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -40,7 +58,10 @@ fn main() {
         "The area of the rectangle is {} square pixels.",
         rect1.area()
     );
+}
 
+// 带有更多参数的方法
+fn can_hold() {
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -56,7 +77,11 @@ fn main() {
     println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
 
-    // 关联函数
-    let sq = Rectangle::square(3);
-    println!("{}", sq.width)
+}
+
+// 多个 impl 块
+impl Rectangle {
+    fn area2(&self) -> u32 {
+        self.width * self.height
+    }
 }

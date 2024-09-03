@@ -10,7 +10,7 @@ fn main() {
 
 fn shadowing() {
     let x = 5;
-    
+
     let x = x + 1;
 
     {
@@ -29,4 +29,3 @@ fn shadowing2() {
     // let mut spaces = "    ";
     // spaces = spaces.len();
 }
-

@@ -1,5 +1,5 @@
 [package]
-name = "ch10-03-lifetime-syntax-02"
+name = "ch10-03-lifetime-syntax"
 version = "0.1.0"
 edition = "2021"
 

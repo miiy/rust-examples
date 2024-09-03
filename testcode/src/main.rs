@@ -1,15 +1,10 @@
-#[derive(Debug)]
-struct Retangle {
-    width: i32,
-    height:i32,
-}
+use std::collections::HashMap;
 
 fn main() {
-    let r = Retangle{
-        width: 100,
-        height: 100
-    };
-    println!("{r:?}");
-    dbg!(r);
-    // println!("{r:?}");
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 20);
+    let team = "Yellow";
+    let score = scores.get(team).copied().unwrap_or(0);
+    println!("{score}")
 }

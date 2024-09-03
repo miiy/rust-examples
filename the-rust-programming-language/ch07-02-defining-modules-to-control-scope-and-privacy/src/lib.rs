@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 mod front_of_house {
     mod hosting {
         fn add_to_waitlist() {}
@@ -8,6 +9,6 @@ mod front_of_house {
 
         fn serve_order() {}
 
-        fn take_peyment() {}
+        fn take_payment() {}
     }
 }

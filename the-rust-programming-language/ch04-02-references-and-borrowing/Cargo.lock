@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "ch10-03-lifetime-syntax-01"
+name = "ch04-02-references-and-borrowing"
 version = "0.1.0"
