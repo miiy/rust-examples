@@ -1,4 +1,5 @@
 // 自定义失败信息
+#![allow(unused_variables)]
 
 pub fn greeting(name: &str) -> String {
     format!("Hello {}!", name)

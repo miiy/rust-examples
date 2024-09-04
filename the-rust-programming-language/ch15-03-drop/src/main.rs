@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 use std::mem::drop;
 
 struct CustomSmartPointer {

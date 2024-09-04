@@ -1,6 +1,6 @@
 // use std::sync::Mutex;
 use std::thread;
-use std::rc::Rc;
+// use std::rc::Rc;
 use std::sync::{Arc, Mutex};
 
 fn main() {

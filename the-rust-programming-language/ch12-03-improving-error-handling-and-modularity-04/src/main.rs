@@ -27,6 +27,7 @@ struct Config {
 
 // 创建一个 Config 的构造函数
 impl Config {
+    #[allow(dead_code)]
     fn new(args: &[String]) -> Config {
         // 增加一个参数数量检查
         if args.len() < 3 {

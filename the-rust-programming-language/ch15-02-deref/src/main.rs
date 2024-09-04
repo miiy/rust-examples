@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 fn main() {
     deref_example();
     box_deref();
@@ -36,5 +37,5 @@ fn mybox_example() {
     let y = MyBox::new(x);
 
     assert_eq!(5, x);
-    assert_eq!(5, *y);
+    // assert_eq!(5, *y);
 }

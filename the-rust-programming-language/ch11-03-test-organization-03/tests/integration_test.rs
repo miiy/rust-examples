@@ -1,7 +1,10 @@
-// 一个 adder crate 中函数的集成测试
+// 集成测试中的子模块
 use adder;
+
+mod common;
 
 #[test]
 fn it_adds_two() {
+    common::setup();
     assert_eq!(4, adder::add_two(2));
 }

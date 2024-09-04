@@ -1,4 +1,7 @@
 // 使用 should_panic 检查 panic
+
+// 检测会造成 panic 的条件
+#[allow(dead_code)]
 pub struct Guess {
     value: i32,
 }

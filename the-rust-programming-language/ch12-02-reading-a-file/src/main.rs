@@ -1,3 +1,4 @@
+// 读取文件
 use std::env;
 use std::fs;
 
@@ -9,6 +10,7 @@ fn main() {
     println!("Searching for {}", query);
     println!("In file {}", file_path);
 
+    // 读取第二个参数所指定的文件内容
     let contents = fs::read_to_string(file_path)
         .expect("Should have been able to read the file");
 

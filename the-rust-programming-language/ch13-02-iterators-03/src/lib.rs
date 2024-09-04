@@ -4,6 +4,7 @@ struct Shoe {
     style: String,
 }
 
+#[allow(dead_code)]
 fn shoes_in_size(shoes: Vec<Shoe>, shoes_size: u32) -> Vec<Shoe> {
     shoes.into_iter().filter(|s| s.size == shoes_size).collect()
 }

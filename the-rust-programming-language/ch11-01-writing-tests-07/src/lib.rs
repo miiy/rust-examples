@@ -1,4 +1,6 @@
 // 带有特定错误信息的 panic! 条件的测试
+
+#[allow(dead_code)]
 pub struct Guess {
     value: i32,
 }

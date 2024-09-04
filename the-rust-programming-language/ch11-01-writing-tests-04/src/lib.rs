@@ -1,5 +1,6 @@
 // 使用 assert_eq! 和 assert_ne! 宏来测试相等
 
+// 使用 assert_eq! 宏测试 add_two 函数
 pub fn add_two(a: i32) -> i32 {
     a + 2
 }

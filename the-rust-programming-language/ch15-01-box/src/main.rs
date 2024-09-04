@@ -3,6 +3,7 @@
 //     Nil,
 // }
 
+#[allow(dead_code)]
 enum List {
     Cons(i32, Box<List>),
     Nil,
@@ -10,6 +11,7 @@ enum List {
 
 use crate::List::{Cons, Nil};
 
+#[allow(unused_variables)]
 fn main() {
     box_example();
 

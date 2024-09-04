@@ -1,4 +1,5 @@
 #[derive(Debug)]
+#[allow(dead_code)]
 struct Rectangle {
     width: u32,
     height: u32,
