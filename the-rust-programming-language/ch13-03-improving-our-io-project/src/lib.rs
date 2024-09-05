@@ -2,16 +2,16 @@ use std::error::Error;
 use std::fs;
 use std::env;
 
-// 组合配置值
 pub struct Config {
     pub query: String,
     pub file_path: String,
     pub ignore_case: bool,
 }
 
-// 创建一个 Config 的构造函数
+// 以迭代器作为参数更新 Config::build 的签名
+// 使用 Iterator trait 代替索引
+// 修改 Config::build 的函数体来使用迭代器方法
 impl Config {
-    // 从 Config::build 中返回 Result
     pub fn build(
         mut args: impl Iterator<Item = String>,
     ) -> Result<Config, &'static str> {
@@ -52,6 +52,8 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+// 使用迭代器适配器来使代码更简明
+// 在 search 函数实现中使用迭代器适配器
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
         .lines()
@@ -74,7 +76,6 @@ pub fn search_case_insenstive<'a>(
 
     results
 }
-
 
 #[cfg(test)]
 mod tests {

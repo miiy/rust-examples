@@ -1,3 +1,7 @@
+// 闭包：可以捕获环境的匿名函数
+// 闭包会捕获其环境
+
+// 衬衫公司赠送场景
 #[derive(Debug, PartialEq, Copy, Clone)]
 enum ShirtColor {
     Red,
@@ -31,7 +35,6 @@ impl Inventory {
     }
 }
 
-// 衬衫公司赠送场景
 fn main() {
     let store = Inventory {
         shirts: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue],

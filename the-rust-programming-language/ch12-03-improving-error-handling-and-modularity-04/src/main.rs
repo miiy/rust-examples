@@ -1,3 +1,6 @@
+// 改善错误信息
+
+// 从 new 中返回 Result 而不是调用 panic!
 use std::env;
 use std::fs;
 use std::process;
@@ -19,27 +22,27 @@ fn main() {
     println!("With text:\n{contents}")
 }
 
-// 组合配置值
 struct Config {
     query: String,
     file_path: String,
 }
 
-// 创建一个 Config 的构造函数
+
+// 增加一个参数数量检查
+// impl Config {
+//     fn new(args: &[String]) -> Config {
+//         if args.len() < 3 {
+//             panic!("not enough arguments");
+//         }
+//         let query = args[1].clone();
+//         let file_path = args[2].clone();
+
+//         Config { query, file_path }
+//     }
+// }
+
+// 从 Config::build 中返回 Result
 impl Config {
-    #[allow(dead_code)]
-    fn new(args: &[String]) -> Config {
-        // 增加一个参数数量检查
-        if args.len() < 3 {
-            panic!("not enough arguments");
-        }
-        let query = args[1].clone();
-        let file_path = args[2].clone();
-
-        Config { query, file_path }
-    }
-
-    // 从 Config::build 中返回 Result
     fn build(args: &[String]) -> Result<Config, &'static str> {
         if args.len() < 3 {
             return Err("not enough arguments");

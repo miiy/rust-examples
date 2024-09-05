@@ -1,7 +1,7 @@
+// 闭包类型推断和注解
 use std::thread;
 use std::time::Duration;
 
-// 闭包类型推断和注解
 fn main() {
     // 为闭包的参数和返回值增加可选的类型注解
     let expensive_closure = |num: u32| -> u32 {

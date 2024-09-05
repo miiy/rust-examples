@@ -1,6 +1,8 @@
+// 组合配置值
 use std::env;
 use std::fs;
 
+// 重构 parse_config 返回一个 Config 结构体实例
 fn main() {
     let args: Vec<String> = env::args().collect();
 
@@ -14,13 +16,11 @@ fn main() {
     println!("With text:\n{contents}")
 }
 
-// 组合配置值
 struct Config {
     query: String,
     file_path: String,
 }
 
-// 提取参数解析器
 fn parse_config(args: &[String]) -> Config {
     let query = args[1].clone();
     let file_path = args[2].clone();

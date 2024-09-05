@@ -1,3 +1,5 @@
+// 将代码拆分到库 crate
+// 将 minigrep create 引入 src/main.rs 的作用域中
 use std::env;
 use std::process;
 
@@ -18,6 +20,5 @@ fn main() {
         process::exit(1);
     }
 }
-
 
 // cargo run -- the poem.txt

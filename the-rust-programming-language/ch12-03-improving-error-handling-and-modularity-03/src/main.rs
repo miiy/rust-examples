@@ -1,6 +1,8 @@
+// 创建一个 Config 的构造函数
 use std::env;
 use std::fs;
 
+// 将 parse_config 变为 Config::new
 fn main() {
     let args: Vec<String> = env::args().collect();
 
@@ -14,13 +16,11 @@ fn main() {
     println!("With text:\n{contents}")
 }
 
-// 组合配置值
 struct Config {
     query: String,
     file_path: String,
 }
 
-// 创建一个 Config 的构造函数
 impl Config {
     fn new(args: &[String]) -> Config {
         let query = args[1].clone();

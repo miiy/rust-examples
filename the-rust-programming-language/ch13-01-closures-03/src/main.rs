@@ -1,6 +1,6 @@
+// 捕获引用或者移动所有权
 use std::thread;
 
-// 捕获引用或者移动所有权
 fn main() {
     borrows();
     println!();
@@ -23,7 +23,7 @@ fn borrows() {
     println!("After calling closure: {list:?}");
 }
 
-// 定义并调用一个铺货可变引用的闭包
+// 定义并调用一个捕获可变引用的闭包
 fn borrows_mut() {
     let mut list = vec![1, 2, 3];
     println!("Before defining closure: {list:?}");

@@ -2,16 +2,14 @@ use std::error::Error;
 use std::fs;
 use std::env;
 
-// 组合配置值
 pub struct Config {
     pub query: String,
     pub file_path: String,
     pub ignore_case: bool,
 }
 
-// 创建一个 Config 的构造函数
+// 检查叫做 IGNORE_CASE 的环境变量
 impl Config {
-    // 从 Config::build 中返回 Result
     pub fn build(args: &[String]) -> Result<Config, &'static str> {
         if args.len() < 3 {
             return Err("not enough arguments");
@@ -30,6 +28,7 @@ impl Config {
     }
 }
 
+// 根据 config.ignore_case 的值调用 search 或 search_case_insenstive
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
 
@@ -54,6 +53,8 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     results
 }
 
+// 实现 search_case_insenstive 函数
+// 定义 search_case_insenstive 函数，它在比较查询和每一行之前都将它们转换为小写
 pub fn search_case_insenstive<'a>(
     query: &str,
     contents: &'a str,
@@ -70,7 +71,8 @@ pub fn search_case_insenstive<'a>(
     results
 }
 
-
+// 编写一个大小写不敏感的 search 函数的失败测试
+// 为准备添加的大小写不敏感函数新增失败测试
 #[cfg(test)]
 mod tests {
     use super::*;

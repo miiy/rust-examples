@@ -2,6 +2,9 @@
 use std::env;
 use std::fs;
 
+// 提取参数解析器
+
+// 从 main 中提取出 parse_config 函数
 fn main() {
     let args: Vec<String> = env::args().collect();
 
@@ -15,7 +18,6 @@ fn main() {
     println!("With text:\n{contents}")
 }
 
-// 提取参数解析器
 fn parse_config(args: &[String]) -> (&str, &str) {
     let query = &args[1];
     let file_path = &args[2];

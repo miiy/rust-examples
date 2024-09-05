@@ -1,4 +1,6 @@
+// 使用 Drop Trait 运行清理代码
 #![allow(unused_variables)]
+
 use std::mem::drop;
 
 struct CustomSmartPointer {
