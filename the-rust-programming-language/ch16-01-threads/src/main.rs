@@ -1,16 +1,20 @@
+// 使用线程同时运行代码
 use std::thread;
 use std::time::Duration;
 
 fn main() {
+    // 使用 spawn 创建新线程
     thread_example1();
     println!();
 
+    // 使用 join 等待所有线程结束
     thread_example2();
     println!();
 
     thread_example3();
     println!();
 
+    // 将 move 闭包与线程一同使用
     thread_example4();
 }
 

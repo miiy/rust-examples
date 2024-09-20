@@ -1,3 +1,10 @@
+// AveragedCollection 结构体维护了一个整型列表及其所有元素的平均值
+// pub struct AveragedCollection {
+//     list: Vec<i32>,
+//     average: f64,
+// }
+
+// 在 AveragedCollection 结构体上实现了 add、remove 和 average 公有犯法
 pub struct AveragedCollection {
     list: Vec<i32>,
     average: f64,

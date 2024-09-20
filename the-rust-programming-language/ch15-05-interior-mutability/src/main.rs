@@ -1,7 +1,5 @@
 // RefCell<T> 和内部可变性模式
 
-
-
 fn main() {
     // 通过 RefCell<T> 在运行时检查借用规则
 

@@ -1,3 +1,5 @@
+// 面向对象设计模式的实现
+
 use blog::Post;
 
 fn main() {
