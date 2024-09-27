@@ -11,3 +11,5 @@ Asynchronous Rust Programming <https://github.com/rustcn-org/async-book>
 Tokio异步编程 <https://github.com/sunface/tokio-course>
 
 Rust 语言圣经 <https://github.com/sunface/rust-course>
+
+Actix Web <https://actix.rs/docs>
