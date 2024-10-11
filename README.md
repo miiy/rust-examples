@@ -13,3 +13,5 @@ Tokio异步编程 <https://github.com/sunface/tokio-course>
 Rust 语言圣经 <https://github.com/sunface/rust-course>
 
 Actix Web <https://actix.rs/docs>
+
+<https://github.com/chapin666/Learning-Rust-Web>
