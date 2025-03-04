@@ -1,5 +1,5 @@
 [package]
-name = "serde1"
+name = "serdetest"
 version = "0.1.0"
 edition = "2021"
 
